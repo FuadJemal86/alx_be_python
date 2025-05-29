@@ -1,6 +1,9 @@
-pattern = int(input('Enter the size of the pattern: '))
+pattern = int(input("Enter the size of the pattern: "))
 
-i = 0
-while i < pattern:
-    print('****')
-    i += 1
+if pattern > 0:
+    i = 1
+    while i <= pattern:
+        print("*" * i)
+        i += 1
+else:
+    print("Please enter a positive number.")
