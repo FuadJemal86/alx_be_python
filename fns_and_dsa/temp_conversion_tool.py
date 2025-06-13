@@ -1,14 +1,14 @@
 # File: temperature_converter.py
 
 # Global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS = (5.0 / 9.0)
+CELSIUS_TO_FAHRENHEIT = (9.0 / 5.0)
 
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS
 
 def convert_to_fahrenheit(celsius):
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT) + 32
 
 def main():
     try:
