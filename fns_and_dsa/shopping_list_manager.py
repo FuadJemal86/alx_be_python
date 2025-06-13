@@ -1,17 +1,17 @@
 # File: shopping_list_manager.py
 
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
 
 def main():
-    shopping_list = []  # This is the array used to manage the shopping list
+    shopping_list = []
 
     while True:
-        display_menu()  # Call the display_menu function
+        display_menu()
         try:
             choice = int(input("Enter your choice (1-4): "))
         except ValueError:
@@ -25,7 +25,6 @@ def main():
                 print(f'"{item}" has been added to the list.')
             else:
                 print("Item name cannot be empty.")
-
         elif choice == 2:
             item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
@@ -33,19 +32,16 @@ def main():
                 print(f'"{item}" has been removed from the list.')
             else:
                 print(f'"{item}" was not found in the shopping list.')
-
         elif choice == 3:
             if shopping_list:
-                print("\nCurrent Shopping List:")
+                print("Current Shopping List:")
                 for idx, item in enumerate(shopping_list, start=1):
                     print(f"{idx}. {item}")
             else:
                 print("Your shopping list is currently empty.")
-
         elif choice == 4:
             print("Goodbye!")
             break
-
         else:
             print("Invalid choice. Please select a number from 1 to 4.")
 
